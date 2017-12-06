@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Wild Gunman</title>
+</head>
+
+<body>
+    <div class="start__back">
+        <div class="github-link" title="See Project at GitHub">
+            <a href="https://github.com/Dabbar/wild_gunman_game" target="_blank"><img src="./images/github.png" alt="See Project at GitHub" ></a>
+        </div>
+        <!--<div class="credits">Programmed by-->
+            <!--<a href="mailto:lapochkin.igor@gmail.com">Igor Lapochkin</a>-->
+        <!--</div>-->
+        <div class="black-back">
+            <div class="loader"></div>
+            <div class="level">
+                <h2>Level:
+                    <span id="lvl-val">1</span>
+                </h2>
+            </div>
+            <div class="time">
+                <h2>Time.You:
+                    <span class="player-time">0.00</span>
+                </h2>
+                <h2>Gunman:
+                    <span class="gunman-time">0.50</span>
+                </h2>
+            </div>
+
+            <div class="reward-wrapper">
+                <h2>$
+                    <span class="reward">0</span>
+                </h2>
+                <h2>REWARD</h2>
+            </div>
+            <div class="score">
+                <h2>$
+                    <span class="score-holder">0</span>
+                </h2>
+                <h2>SCORE</h2>
+            </div>
+
+            <div class="main__back">
+                <img class="hat">
+                <img src="images/logo.png" alt="" class="logo">
+                <div class="gunman"></div>
+                <h1 class="start__btn">Start Game</h1>
+                <span class="reset">Reset</span>
+                <div class="message fire">
+                    <p>FIRE !!!</p>
+                </div>
+                <div class="message won">
+                    <p>YOU WON !!!</p>
+                </div>
+                <div class="message lost">
+                    <p>YOU LOST !!!</p>
+                </div>
+                <div class="message foul">
+                    <p>FOUL !!!</p>
+                </div>
+                <div class="gameOver">Game Over</div>
+            </div>
+
+            <form id="result-form" action="/game/add" method="post">
+                <input type="text" name="name" placeholder="Type your name">
+                <input type="text" name="score">
+                <input type="text" name="kills">
+                <input type="submit">
+            </form>
+
+            <table id="results-table">
+                <caption>High scores</caption>
+                <thead>
+                    <tr>
+                        <td>Pos</td>
+                        <td>Name</td>
+                        <td>Kills</td>
+                        <td>Score</td>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="images__container">
+        <img src="images/g6Won.png" height="240" width="212" />
+        <img src="images/g6Stop.png" height="240" width="106" />
+        <img src="images/g6Lost.png" height="240" width="212" />
+        <img src="images/g6Hat.png" height="24" width="78" />
+        <img src="images/g6Fire.png" height="240" width="318" />
+        <img src="images/g6Alert.png" height="240" width="106" />
+        <img src="images/g6.png" height="240" width="318" />
+        <img src="images/g5Won.png" height="240" width="212" />
+        <img src="images/g5Stop.png" height="240" width="106" />
+        <img src="images/g5Lost.png" height="240" width="212" />
+        <img src="images/g5Hat.png" height="39" width="60" />
+        <img src="images/g5Fire.png" height="240" width="318" />
+        <img src="images/g5Alert.png" height="240" width="106" />
+        <img src="images/g5.png" height="240" width="318" />
+        <img src="images/g4Won.png" height="240" width="212" />
+        <img src="images/g4Stop.png" height="240" width="106" />
+        <img src="images/g4Lost.png" height="240" width="212" />
+        <img src="images/g4Hat.png" height="48" width="90" />
+        <img src="images/g4Fire.png" height="240" width="318" />
+        <img src="images/g4Alert.png" height="240" width="106" />
+        <img src="images/g4.png" height="240" width="318" />
+        <img src="images/g3Won.png" height="240" width="212" />
+        <img src="images/g3Stop.png" height="240" width="106" />
+        <img src="images/g3Lost.png" height="240" width="212" />
+        <img src="images/g3Hat.png" height="24" width="48" />
+        <img src="images/g3Fire.png" height="240" width="318" />
+        <img src="images/g3Alert.png" height="240" width="106" />
+        <img src="images/g3.png" height="240" width="318" />
+        <img src="images/g2Won.png" height="240" width="212" />
+        <img src="images/g2Stop.png" height="240" width="106" />
+        <img src="images/g2Lost.png" height="240" width="212" />
+        <img src="images/g2Fire.png" height="240" width="318" />
+        <img src="images/g2Alert.png" height="240" width="106" />
+        <img src="images/g2.png" height="240" width="318" />
+        <img src="images/g1Won.png" height="240" width="212" />
+        <img src="images/g1Stop.png" height="240" width="106" />
+        <img src="images/g1Lost.png" height="240" width="212" />
+        <img src="images/g1Left.png" height="240" width="318" />
+        <img src="images/g1Hat.png" height="24" width="78" />
+        <img src="images/g1Fire.png" height="240" width="318" />
+        <img src="images/g1Alert.png" height="240" width="106" />
+        <img src="images/g1.png" height="240" width="318" />
+    </div>
+
+    <audio src="audio/Ennio_Morricone-The_Good,_The_Bad_And_The_Ugly.ogg" id="morricone"></audio>
+    <audio src="audio/intro.m4a" id="intro"></audio>
+    <audio src="audio/fire.m4a" id="fire"></audio>
+    <audio src="audio/wait.m4a" id="wait"></audio>
+    <audio src="audio/win.m4a" id="win"></audio>
+    <audio src="audio/death.m4a" id="death"></audio>
+    <audio src="audio/foul.m4a" id="foul"></audio>
+    <audio src="audio/shot.m4a" id="shot"></audio>
+    <audio src="audio/shot-fall.m4a" id="shotFall"></audio>
+
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
