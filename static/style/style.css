@@ -1,11 +1,22 @@
+@font-face{
+	font-family: 'Algeria';
+	src: url('../fonts/algeria-webfont.eot');
+	src: url('../fonts/algeria-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/algeria-webfont.woff') format('woff'),
+	     url('../fonts/algeria-webfont.ttf') format('truetype')
+}
+
 * {
     margin: 0;
     padding: 0;
 
     cursor: url('revolverFR.svg'), auto !important;
 
-    font-family: Algerian, serif;
+    font-family: 'Algeria', Algerian, serif;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
 }
+
 
 h2 {
     text-transform: uppercase;
@@ -127,7 +138,7 @@ h2 {
 }
 
 .start__btn.over.with-table {
-    top: 330px;
+    top: 350px;
 
     color: white;
 }
@@ -135,10 +146,9 @@ h2 {
 /* Level */
 .level {
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: 20px;
 
-    color: white;
     color: #ada7a2;
 }
 
@@ -152,8 +162,7 @@ h2 {
     top: 0;
     right: 30px;
 
-    height: 100px;
-    padding-top: 15px;
+    padding-top: 20px;
 
     text-align: right;
 
@@ -164,6 +173,10 @@ h2 {
     letter-spacing: 1px;
 
     font-size: 1.7em;
+}
+
+.time h2:first-of-type {
+    margin-bottom: 15px;
 }
 
 .time span {
@@ -183,7 +196,7 @@ h2 {
 /* Reward block */
 .reward-wrapper {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
 
     margin-left: 20px;
@@ -195,7 +208,7 @@ h2 {
 }
 
 .reward-wrapper h2:first-of-type {
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 
     font-size: 30px;
 }
@@ -208,9 +221,8 @@ h2 {
 .score {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 25px;
 
-    height: 80px;
     margin-right: 20px;
 
     text-align: right;
@@ -219,7 +231,7 @@ h2 {
 }
 
 .score h2:first-of-type {
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 
     font-size: 30px;
 }
@@ -247,6 +259,11 @@ h2 {
 .won, .lost {
     top: 20px;
     right: 300px;
+}
+
+.message > p {
+    position: relative;
+    top: 1px;
 }
 
 .reset {
@@ -284,7 +301,6 @@ h2 {
     position: absolute;
     z-index: 1;
     right: 0;
-    /*top: 245px;*/
     left: 0;
 
     display: none;
@@ -373,6 +389,8 @@ input[type='submit'], input[name='score'], input[name='kills'] {
     position: absolute;
     top: 50%;
     left: 50%;
+
+    line-height: 30px;
 
     visibility: hidden;
 
@@ -850,8 +868,8 @@ audio {
 
     animation: spin 2s linear infinite;
 
-    border: 6px solid #f3f3f3; /* Light grey */
-    border-top: 6px solid #818181; /* Blue */
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #818181;
     border-radius: 50%;
 }
 
